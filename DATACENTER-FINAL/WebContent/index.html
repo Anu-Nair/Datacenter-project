@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  height:35px;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  
+}
+
+.main {
+	margin-top: 60px;
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+ <br><br><br>
+  <font size=14><a href="#">Home</a></font>
+  <font size=14><a href="#">Add</a></font>
+  <font size=14><a href="#">Delete</a></font>
+  <font size=14><a href="#">Update</a></font>
+  <font size=14><a href="#">Show</a></font>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Employee database</a>
+    </div>
+  </div>
+</nav>
+<div class="main">
+  <form action="demo.jsp">
+  <div class="container">
+    <h1>Add</h1>
+    <p>Please fill in this form to add an employee.</p>
+    <hr>
+
+    <label for="email"><b>Name:</b></label><br>
+    <input type="text" size="50" placeholder="Enter Name" name="name" required><br>
+
+    <label for="psw"><b>Email:</b></label><br>
+    <input type="text" size="50" placeholder="Enter Email" name="email" required><br>
+
+    <label for="psw-repeat"><b>Company:</b></label><br>
+    <input type="text" size="50" placeholder="Enter Company" name="company" required><br>
+    <hr>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+</form>
+</div>
+
+</body>
+</html>
